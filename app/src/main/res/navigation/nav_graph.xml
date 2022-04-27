@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.zoneout.bottomnavigationbar.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_postsList"
+            app:destination="@id/postsList" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_postfrommap"
+            app:destination="@id/navigation_postfrommap" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_Recommended"
+        android:name="com.example.zoneout.bottomnavigationbar.RecommendedFragment"
+        android:label="@string/title_recommended"
+        tools:layout="@layout/fragment_recommended" >
+        <action
+            android:id="@+id/action_navigation_Recommended_to_navigation_post"
+            app:destination="@id/navigation_post" />
+        <action
+            android:id="@+id/action_navigation_Recommended_self"
+            app:destination="@id/navigation_Recommended" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_Add"
+        android:name="com.example.zoneout.bottomnavigationbar.AddFragment"
+        android:label="@string/title_add"
+        tools:layout="@layout/fragment_add" />
+
+    <fragment
+        android:id="@+id/navigation_Profile"
+        android:name="com.example.zoneout.bottomnavigationbar.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_Profile_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_navigation_Profile_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_navigation_Profile_to_profileReviewsFragment"
+            app:destination="@id/profileReviewsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_post"
+        android:name="com.example.zoneout.PostFragment"
+        android:label="fragment_post"
+        tools:layout="@layout/fragment_post"
+
+        >
+
+        <action
+            android:id="@+id/action_navigation_post_to_postsList"
+            app:destination="@id/postsList" />
+
+
+        <action
+            android:id="@+id/action_navigation_post_to_otherProfile"
+            app:destination="@id/otherProfile" />
+        <action
+            android:id="@+id/action_navigation_post_to_navigation_Profile"
+            app:destination="@id/navigation_Profile" />
+        <action
+            android:id="@+id/action_navigation_post_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_postfrommap"
+        android:name="com.example.zoneout.PostFromMap"
+        android:label="fragment_post"
+        tools:layout="@layout/fragment_post_from_map"
+
+        >
+        <action
+            android:id="@+id/action_navigation_postfrommap_to_otherProfile"
+            app:destination="@id/otherProfile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_MyTrips"
+        android:name="com.example.zoneout.bottomnavigationbar.MyTripsFragment"
+        android:label="fragment_my_trips"
+        tools:layout="@layout/fragment_my_trips" >
+        <action
+            android:id="@+id/action_navigation_MyTrips_to_navigation_post"
+            app:destination="@id/navigation_post" />
+    </fragment>
+    <fragment
+        android:id="@+id/postsList"
+        android:name="com.example.zoneout.PostsList"
+        android:label="fragment_location_posts"
+        tools:layout="@layout/fragment_location_posts" >
+        <action
+            android:id="@+id/action_postsList_to_navigation_post"
+            app:destination="@id/navigation_post"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.zoneout.EditProfileFragment"
+        android:label="EditProfileFragment" >
+        <action
+            android:id="@+id/action_editProfileFragment_to_navigation_Profile"
+            app:destination="@id/navigation_Profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.zoneout.SettingsFragment"
+        android:label="SettingsFragment" >
+        <action
+            android:id="@+id/action_settingsFragment_to_luminosityFragment"
+            app:destination="@id/luminosityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/luminosityFragment"
+        android:name="com.example.zoneout.LuminosityFragment"
+        android:label="LuminosityFragment" />
+
+    <fragment
+        android:id="@+id/otherProfile"
+        android:name="com.example.zoneout.OtherProfile"
+        android:label="OtherProfile" >
+        <action
+            android:id="@+id/action_otherProfile_to_otherProfileReviewsFragment"
+            app:destination="@id/otherProfileReviewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileReviewsFragment"
+        android:name="com.example.zoneout.ProfileReviewsFragment"
+        android:label="ProfileReviewsFragment" >
+        <action
+            android:id="@+id/action_profileReviewsFragment_to_navigation_post"
+            app:destination="@id/navigation_post" />
+    </fragment>
+    <fragment
+        android:id="@+id/otherProfileReviewsFragment"
+        android:name="com.example.zoneout.OtherProfileReviewsFragment"
+        android:label="OtherProfileReviewsFragment" >
+        <action
+            android:id="@+id/action_otherProfileReviewsFragment_to_navigation_post"
+            app:destination="@id/navigation_post" />
+    </fragment>
+
+</navigation>

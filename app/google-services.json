@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "284426275150",
+    "firebase_url": "https://zoneoutfinal-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "zoneoutfinal",
+    "storage_bucket": "zoneoutfinal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:284426275150:android:f205bd8dbcbc057dabb61f",
+        "android_client_info": {
+          "package_name": "com.example.zoneout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "284426275150-9i3k9lnkfjpondosai5pf93b6l169ona.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkNm3ZE7BDYkmQU88mI70es1AHnF9waCw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "284426275150-9i3k9lnkfjpondosai5pf93b6l169ona.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
